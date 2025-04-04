@@ -8,6 +8,7 @@ public class SpringbootRuiApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(SpringbootRuiApplication.class, args);
+
     }
 
 }
