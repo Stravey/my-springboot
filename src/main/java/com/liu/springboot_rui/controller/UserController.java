@@ -1,5 +1,6 @@
 package com.liu.springboot_rui.controller;
 
+import com.liu.springboot_rui.pojo.ResponseMessage;
 import com.liu.springboot_rui.pojo.dto.UserDto;
 import com.liu.springboot_rui.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,9 +15,9 @@ public class UserController {
 
     //增加
     @PostMapping   //URL:localhost:8080/user
-    public String add(@RequestBody UserDto user) {
+    public ResponseMessage add(@RequestBody UserDto user) {
         userService.add(user);
-        return "success";
+        return ResponseMessage.success();
     }
 
 
